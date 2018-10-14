@@ -281,11 +281,11 @@ void Evolution::CreateNewKid(Neanderthal * parent1, Neanderthal * parent2)
 void Evolution::CheckForMutations(Abilities &kidAbilities, Needs &maxNeeds)
 {
 	// Decide which ability to mutate
-	int randomNumber = (rand() % 3) + 1;
+	int randomNumber = (rand() % 4);
 
 	switch (randomNumber)
 	{
-	case 1: // Mutate for Better Food Income
+	case 0: // Mutate for Better Food Income
 	{
 		kidAbilities.hunting += Mutate();
 
@@ -296,7 +296,7 @@ void Evolution::CheckForMutations(Abilities &kidAbilities, Needs &maxNeeds)
 
 		break;
 	}
-	case 2: // Mutate for Better Water Income
+	case 1: // Mutate for Better Water Income
 	{
 		kidAbilities.waterTracking += Mutate();
 
@@ -307,7 +307,7 @@ void Evolution::CheckForMutations(Abilities &kidAbilities, Needs &maxNeeds)
 
 		break;
 	}
-	case 3: // Mutate for Better Energy Income
+	case 2: // Mutate for Better Energy Income
 	{
 		kidAbilities.resting += Mutate();
 
@@ -318,7 +318,7 @@ void Evolution::CheckForMutations(Abilities &kidAbilities, Needs &maxNeeds)
 
 		break;
 	}
-	case 4: // Mutate for Better Entertainment Income
+	case 3: // Mutate for Better Entertainment Income
 	{
 		kidAbilities.havingFun += Mutate();
 

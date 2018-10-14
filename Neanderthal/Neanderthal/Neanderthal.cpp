@@ -168,7 +168,7 @@ bool Neanderthal::SpendLife()
 
 int Neanderthal::RollD20()
 {
-	return (rand() % 19 + 1);
+	return (rand() % 19) +1;
 }
 
 int Neanderthal::RollAbilityCheck(int abilityScore)
